@@ -1,10 +1,13 @@
+import Link from "next/link";
 import "./Navbar.css";
 
 export function Navbar() {
     return (
         <div className="navbar gap-2 bg-base-100">
             <div className="">
-                <a className="btn btn-ghost text-xl">PlaySpot</a>
+                <Link className="btn btn-ghost text-xl" href="/">
+                    PlaySpot
+                </Link>
             </div>
             <div className="flex-grow">
                 <div id="search-field" className="flex-none justify-center gap-2 w-full">

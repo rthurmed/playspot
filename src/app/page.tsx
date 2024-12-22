@@ -1,6 +1,7 @@
-import { albums } from "@/data";
+import { albums } from "@/database";
 import Image from "next/image";
 import { TabSelector } from "./TabSelector";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -35,7 +36,12 @@ export default function Home() {
               <h2 className="card-title">{album.title}</h2>
               <p>{album.artist.name}</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Listen</button>
+                <Link
+                  className="btn btn-primary"
+                  href={`/album/${album.id}`}
+                >
+                  Explore
+                </Link>
               </div>
             </div>
           </div>
