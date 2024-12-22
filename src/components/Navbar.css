@@ -1,0 +1,9 @@
+/* same as "lg" */
+@media (min-width: 1024px) {
+    #search-field {
+        position: absolute;
+        width: auto;
+        left: 50vw;
+        translate: -50% 0%;
+    }
+}
