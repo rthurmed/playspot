@@ -1,4 +1,5 @@
 import { albums } from "@/database";
+import Link from "next/link";
 
 export default async function SearchPage({
     searchParams
@@ -12,6 +13,8 @@ export default async function SearchPage({
             a.title.toUpperCase().includes(queryString.toUpperCase()) ||
             a.artist.name.toUpperCase().includes(queryString.toUpperCase())
         ));
+    
+    const currentUrl = "/search?q=" + queryString;
 
     return (
         <div className="max-w-5xl py-6 px-6 m-auto">
@@ -35,8 +38,18 @@ export default async function SearchPage({
                                     <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl h-16 aspect-square" />
                                 </figure>
                                 <div className="card-body">
-                                    <p>{album.title}</p>
-                                    <p>{album.artist.name}</p>
+                                    <div className="flex flex-row">
+                                        <div className="flex-grow">
+                                            <p>{album.title}</p>
+                                            <p>{album.artist.name}</p>
+                                        </div>
+                                        <Link
+                                            className="btn btn-primary"
+                                            href={`/album/${album.id}?back=${encodeURIComponent(currentUrl)}`}
+                                        >
+                                            Explore
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         ))}
