@@ -17,6 +17,7 @@ export default function RootLayout({
       <body className="antialiased">
         <Navbar />
         {children}
+        {/* TODO: player interface (with PlayerContext) */}
       </body>
     </html>
   );
