@@ -27,14 +27,9 @@ function NavbarSearchComponent() {
     function handleReset(e: FormEvent) {
         e.preventDefault();
         setQuery("");
-        router.push("/search");
         if (inputRef.current !== null) {
             inputRef.current.focus();
         }
-    }
-
-    function handleFocus() {
-        router.push("/search?q=" + query);
     }
 
     return (
@@ -52,7 +47,6 @@ function NavbarSearchComponent() {
                         placeholder="Search"
                         value={query}
                         onChange={(e) => setQuery(e.target.value || '')}
-                        onFocus={handleFocus}
                     />
                     {query.length > 0 && (
                         <button
