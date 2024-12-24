@@ -1,12 +1,21 @@
+"use client";
+
 import { albums } from "@/database";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export default async function SearchPage({
-    searchParams
-}: {
-    searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-}) {
-    const queryString = (await searchParams)["q"]?.toString() || undefined;
+export default function SearchPage() {
+    return (
+        <Suspense>
+            <SearchPageComponent />
+        </Suspense>
+    )
+}
+
+function SearchPageComponent() {
+    const searchParams = useSearchParams();
+    const queryString = searchParams.get("q")?.toString() || undefined;
 
     const filteredAlbums = queryString === undefined ? [] : albums
         .filter((a) => (
@@ -25,7 +34,7 @@ export default async function SearchPage({
             ) : (
                 <>
                     <div className="flex flex-row justify-between">
-                        <h2>Results for "{queryString}"</h2>
+                        <h2>Results for &quot;{queryString}&quot;</h2>
                         <span>{filteredAlbums.length} albums</span>
                     </div>
                     <div className="flex flex-col">

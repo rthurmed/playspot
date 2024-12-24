@@ -1,9 +1,17 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, Suspense, useRef, useState } from "react";
 
 export function NavbarSearch() {
+    return (
+        <Suspense>
+            <NavbarSearchComponent />
+        </Suspense>
+    )
+}
+
+function NavbarSearchComponent() {
     const router = useRouter();
     const searchParams = useSearchParams();
 

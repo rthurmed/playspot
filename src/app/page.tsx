@@ -1,5 +1,4 @@
 import { albums } from "@/database";
-import Image from "next/image";
 import { TabSelector } from "./TabSelector";
 import Link from "next/link";
 

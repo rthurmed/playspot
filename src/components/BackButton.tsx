@@ -1,12 +1,21 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 interface BackButtonProps {
     default: string;
 }
 
 export function BackButton(props: BackButtonProps) {
+    return (
+        <Suspense>
+            <BackButtonComponent {...props} />
+        </Suspense>
+    )
+}
+
+export function BackButtonComponent(props: BackButtonProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
 

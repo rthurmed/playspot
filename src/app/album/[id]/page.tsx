@@ -2,6 +2,13 @@ import { BackButton } from "@/components/BackButton";
 import { albums } from "@/database";
 import { redirect } from "next/navigation";
 
+// NOTE: only needed for generating a static website
+export async function generateStaticParams() {
+    return albums.map((album) => ({
+        id: album.id,
+    }));
+}
+
 export default async function AlbumOnePage({
     params,
 }: {
