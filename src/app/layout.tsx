@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Providers } from "./providers";
+import { Player } from "@/components/Player";
 
 export const metadata: Metadata = {
   title: "PlaySpot",
@@ -19,7 +20,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           {children}
-          {/* TODO: player interface (with PlayerContext) */}
+          <Player />
         </Providers>
       </body>
     </html>
