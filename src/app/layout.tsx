@@ -19,7 +19,9 @@ export default function RootLayout({
       <body className="antialiased">
         <Providers>
           <Navbar />
-          {children}
+          <div className="pb-60">
+            {children}
+          </div>
           <Player />
         </Providers>
       </body>
