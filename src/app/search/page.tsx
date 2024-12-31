@@ -1,5 +1,6 @@
 "use client";
 
+import { NavbarSearch } from "@/components/NavbarSearch";
 import { albums } from "@/database";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -27,6 +28,9 @@ function SearchPageComponent() {
 
     return (
         <div className="max-w-5xl py-6 px-6 m-auto">
+            <div className="md:hidden pb-6">
+                <NavbarSearch />
+            </div>
             {queryString === undefined ? (
                 <div className="text-center">
                     <p>Type something in the search bar above to find your favorite albums</p>
@@ -43,9 +47,9 @@ function SearchPageComponent() {
                                 key={album.id}
                                 className="card card-side bg-base-100 hover:bg-base-300"
                             >
-                                <div className="pl-6">
+                                <div className="pl-6 flex align-middle">
                                     <figure>
-                                        <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl h-16 aspect-square" />
+                                        <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl h-16 aspect-square bg-stone-800 text-center p-4" />
                                     </figure>
                                 </div>
                                 <div className="card-body">
