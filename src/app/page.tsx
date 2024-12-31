@@ -22,7 +22,7 @@ export default function Home() {
       <div className="px-6">
         <TabSelector />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 max-xl:grid-cols-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
         {albums.map((album) => (
           <div
             key={album.id}
