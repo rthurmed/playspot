@@ -28,9 +28,11 @@ export default function Home() {
             key={album.id}
             className="card bg-base-100 hover:bg-base-300 shadow-xl"
           >
-            <figure className="py-6 px-6">
-              <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl w-full aspect-square" />
-            </figure>
+            <div className="py-6 px-6">
+              <figure>
+                <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl w-full aspect-square bg-stone-800 text-center p-4" />
+              </figure>
+            </div>
             <div className="card-body pt-0">
               <h2 className="card-title">{album.title}</h2>
               <p>{album.artist.name}</p>

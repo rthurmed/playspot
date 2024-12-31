@@ -43,9 +43,11 @@ function SearchPageComponent() {
                                 key={album.id}
                                 className="card card-side bg-base-100 hover:bg-base-300"
                             >
-                                <figure className="pl-6">
-                                    <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl h-16 aspect-square" />
-                                </figure>
+                                <div className="pl-6">
+                                    <figure>
+                                        <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl h-16 aspect-square" />
+                                    </figure>
+                                </div>
                                 <div className="card-body">
                                     <div className="flex flex-row">
                                         <div className="flex-grow">

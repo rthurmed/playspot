@@ -30,7 +30,7 @@ export default async function AlbumOnePage({
             </div>
             <div className="flex flex-row items-stretch gap-6">
                 <figure>
-                    <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl w-full aspect-square" />
+                    <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl h-48 aspect-square bg-stone-800 text-center p-4" />
                 </figure>
                 <div className="flex flex-col gap-4 flex-grow">
                     <p>
