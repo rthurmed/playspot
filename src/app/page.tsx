@@ -30,7 +30,7 @@ export default function Home() {
           >
             <div className="py-6 px-6">
               <figure>
-                <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl w-full aspect-square bg-stone-800 text-center p-4" />
+                <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl w-full aspect-square bg-stone-800" />
               </figure>
             </div>
             <div className="card-body pt-0">

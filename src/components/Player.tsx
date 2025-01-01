@@ -4,7 +4,7 @@ export function Player() {
             <div className="flex flex-row items-center gap-4 py-6 pl-6 pr-4 md:pr-6">
                 <button id="player-album-button" className="btn h-16 p-0 hover:bg-transparent">
                     <figure>
-                        <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl h-16 aspect-square bg-stone-800 text-center p-2" />
+                        <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl h-16 aspect-square bg-stone-800" />
                     </figure>
                 </button>
                 <div className="flex flex-row-reverse md:flex-row items-center flex-grow gap-4">

@@ -49,7 +49,7 @@ function SearchPageComponent() {
                             >
                                 <div className="pl-6 flex align-middle">
                                     <figure>
-                                        <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl h-16 aspect-square bg-stone-800 text-center p-4" />
+                                        <img src="https://placecats.com/300/300" alt="Album" className="rounded-2xl h-16 aspect-square bg-stone-800" />
                                     </figure>
                                 </div>
                                 <div className="card-body">
